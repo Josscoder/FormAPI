@@ -14,7 +14,7 @@ import com.denzelcode.form.window.SimpleWindowForm;
 
 import java.util.List;
 
-public class FormAPI extends PluginBase {
+public class FormAPI {
 
     public static Thread mainThread;
 
@@ -80,10 +80,5 @@ public class FormAPI extends PluginBase {
         } else {
             scheduler.scheduleTask(task);
         }
-    }
-
-    @Override
-    public void onEnable() {
-        init(this);
     }
 }
