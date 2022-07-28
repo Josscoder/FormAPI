@@ -96,7 +96,7 @@ public class SimpleWindowForm extends FormWindowSimple implements IWindowForm<Si
     }
 
     @Override
-    public List<IHandler<SimpleFormButtonClickEvent>> getHandlers() {
+    public List<IHandler<SimpleFormButtonClickEvent>> getWindowFormHandlers() {
         return handlers;
     }
 
