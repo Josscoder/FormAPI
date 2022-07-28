@@ -1,11 +1,9 @@
 package com.denzelcode.form.window;
 
 import cn.nukkit.Player;
-import cn.nukkit.Server;
 import cn.nukkit.form.element.Element;
 import cn.nukkit.form.element.ElementButtonImageData;
 import cn.nukkit.form.window.FormWindowCustom;
-import cn.nukkit.scheduler.Task;
 import com.denzelcode.form.FormAPI;
 import com.denzelcode.form.element.*;
 import com.denzelcode.form.event.CustomFormSubmitEvent;
@@ -235,7 +233,7 @@ public class CustomWindowForm extends FormWindowCustom implements IWindowForm<Cu
     }
 
     @Override
-    public List<IHandler<CustomFormSubmitEvent>> getHandlers() {
+    public List<IHandler<CustomFormSubmitEvent>> getWindowFormHandlers() {
         return handlers;
     }
 
