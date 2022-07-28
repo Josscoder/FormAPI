@@ -13,11 +13,15 @@ Download the latest JAR: https://github.com/DenzelCode/FormAPI/releases/latest
 <dependency>
     <groupId>com.denzelcode.form</groupId>
     <artifactId>FormAPI</artifactId>
-    <version>2.1-SNAPSHOT</version>
+    <version>2.2-SNAPSHOT</version>
     <systemPath>${project.basedir}/lib/FormAPI.jar</systemPath>
 </dependency>
 ```
 
+## Installation:
+- Put the FormAPI.jar inside of /plugins. 
+
+In case you don't want to put it inside of plugins just execute this line of code inside of your plugin to run the EventListener:
 ```
 import com.denzelcode.form.FormAPI;
 
