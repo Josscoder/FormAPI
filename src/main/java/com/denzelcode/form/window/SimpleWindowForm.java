@@ -50,7 +50,8 @@ public class SimpleWindowForm extends FormWindowSimple implements IWindowForm<Si
     }
 
     public SimpleWindowForm addButton(String name, String text, String path) {
-       return addButton(name, text, ImageType.URL, path);
+        ImageType imageType = path.startsWith("http") ? ImageType.URL : ImageType.PATH;
+       return addButton(name, text, imageType, path);
     }
 
     public SimpleWindowForm addButton(String name, String text, ImageType imageType, String path) {
