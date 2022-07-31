@@ -13,7 +13,7 @@ Download the latest JAR: https://github.com/DenzelCode/FormAPI/releases/latest
 <dependency>
     <groupId>com.denzelcode.form</groupId>
     <artifactId>FormAPI</artifactId>
-    <version>2.2-SNAPSHOT</version>
+    <version>2.2.1-SNAPSHOT</version>
     <systemPath>${project.basedir}/lib/FormAPI.jar</systemPath>
 </dependency>
 ```
