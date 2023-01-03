@@ -12,15 +12,19 @@ public class Slider extends ElementSlider implements IElement {
     protected float value;
 
     public Slider(IWindowForm form, String name, String text, float min, float max) {
-        this(form, name, text, min, max, -1);
+        this(form, name, text, min, max, 1);
     }
 
     public Slider(IWindowForm form, String name, String text, float min, float max, int step) {
-        this(form, name, text, min, max, step, -1.0F);
+        this(form, name, text, min, max, step, 0);
     }
 
     public Slider(IWindowForm form, String name, String text, float min, float max, int step, float defaultValue) {
         super(text, min, max, step, defaultValue);
+
+        if(min >= max) {
+            throw new IllegalArgumentException("Maximum value can't be smaller or equal to the minimal value");
+        }
 
         this.value = defaultValue;
 
