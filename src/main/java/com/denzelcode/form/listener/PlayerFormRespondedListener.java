@@ -86,13 +86,15 @@ public class PlayerFormRespondedListener implements Listener {
                 } else if (element instanceof Dropdown) {
                     Dropdown el = (Dropdown) element;
 
-                    if (window.wasClosed()) {
-                        el.setValue(el.getDefaultOptionIndex());
+                    if (el.getOptions().size() > 0) {
+                        if (window.wasClosed()) {
+                            el.setValue(el.getDefaultOptionIndex());
 
-                        continue;
+                            continue;
+                        }
+
+                        el.setValue(window.getResponse().getDropdownResponse(i).getElementID());
                     }
-
-                    el.setValue(window.getResponse().getDropdownResponse(i).getElementID());
                 } else if (element instanceof Label) {
                     Label el = (Label) element;
 
@@ -126,13 +128,15 @@ public class PlayerFormRespondedListener implements Listener {
                 } else {
                     StepSlider el = (StepSlider) element;
 
-                    if (window.wasClosed()) {
-                        el.setValue(el.getDefaultStepIndex());
+                    if (el.getSteps().size() > 0) {
+                        if (window.wasClosed()) {
+                            el.setValue(el.getDefaultStepIndex());
 
-                        continue;
+                            continue;
+                        }
+
+                        el.setValue(window.getResponse().getStepSliderResponse(i).getElementID());
                     }
-
-                    el.setValue(window.getResponse().getStepSliderResponse(i).getElementID());
                 }
             }
 
